@@ -7,7 +7,6 @@ class Pmv:
     vol: float
     mass: float
     
-    @property
     def get_vol(self) -> Decimal:                
         return round(
           Decimal(
@@ -15,10 +14,9 @@ class Pmv:
           ) /
           Decimal(
               self.den
-          ), 3
+          ), 2
         )
 
-    @property
     def get_den(self) -> Decimal:
         return round(
           Decimal(
@@ -26,10 +24,9 @@ class Pmv:
           ) *
           Decimal(
               self.vol
-          ), 3
+          ), 2
         )
 
-    @property
     def get_mass(self) -> Decimal:
          return round(
            Decimal(
@@ -37,14 +34,14 @@ class Pmv:
            ) /
            Decimal(
                self.vol
-           ), 3
+           ), 2
          )
-	
-vol = Pmv(6, 0, 2)
-print(vol.get_vol)
+    
+vol = Pmv(6.2, 0, 2.1)
+print(vol.get_vol())
 
-den = Pmv(0, 3, 4)
-print(den.get_den)
+den = Pmv(0, 3.1, 4.8)
+print(den.get_den())
 
-mass = Pmv(5, 2, 0)
-print(mass.get_mass)
+mass = Pmv(8.9, 2.2, 0)
+print(mass.get_mass())
