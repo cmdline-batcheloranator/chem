@@ -3,9 +3,9 @@ from dataclasses import dataclass
 
 @dataclass
 class Pmv:
-    den: Decimal
-    vol: Decimal
-    mass: Decimal
+    den: float
+    vol: float
+    mass: float
     
     @property
     def get_vol(self) -> Decimal:                
